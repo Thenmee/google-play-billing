@@ -8,6 +8,7 @@
       "email": "imdhemy@gmail.com"
     }
   ],
+  "minimum-stability": "stable",
   "require": {
     "php": ">=8.0",
     "ext-json": "*",
