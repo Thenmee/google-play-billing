@@ -12,8 +12,8 @@ use Imdhemy\GooglePlay\ValueObjects\Time;
  * Subscription Client.
  */
 class SubscriptionClient
-{
-    public const URI_GET = 'https://androidpublisher.googleapis.com/androidpublisher/v3/applications/%s/purchases/subscriptions/%s/tokens/%s';
+ {
+    public const URI_GET = 'https://androidpublisher.googleapis.com/androidpublisher/v3/applications/%s/purchases/subscriptionsv2/tokens/%s';
     public const URI_ACKNOWLEDGE = 'https://androidpublisher.googleapis.com/androidpublisher/v3/applications/%s/purchases/subscriptions/%s/tokens/%s:acknowledge';
     public const URI_CANCEL = 'https://androidpublisher.googleapis.com/androidpublisher/v3/applications/%s/purchases/subscriptions/%s/tokens/%s:cancel';
     public const URI_DEFER = 'https://androidpublisher.googleapis.com/androidpublisher/v3/applications/%s/purchases/subscriptions/%s/tokens/%s:defer';
@@ -130,6 +130,6 @@ class SubscriptionClient
 
     private function getEndpoint(string $template): string
     {
-        return sprintf($template, $this->packageName, $this->subscriptionId, $this->token);
+        return sprintf($template, $this->packageName,  $this->token);
     }
 }
